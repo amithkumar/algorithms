@@ -1,0 +1,35 @@
+/* SPOJ : http://www.spoj.com/problems/ACPC10A/
+Solutions as follows */
+using System;
+using System.Runtime.CompilerServices;
+
+namespace spoj
+{
+    internal class Program
+    {
+        private static void Main(string[] args)
+        {
+            while (true)
+            {
+                string[] nums = Console.ReadLine().Split();
+                float n1 = float.Parse(nums[0]);
+                float n2 = float.Parse(nums[1]);
+                float n3 = float.Parse(nums[2]);
+                if (n1 == 0f && n2 == 0f && n3 == 0f)
+                {
+                    return;
+                }
+
+                    if (n2 - n1 == n3 - n2)
+                    {
+                        Console.WriteLine("AP {0}", n3 + n2 - n1);
+                    }
+                    else
+                    {
+                        Console.WriteLine("GP {0}", n3 * (n2 / n1));
+                    }
+            }
+        }
+    }
+}
+
