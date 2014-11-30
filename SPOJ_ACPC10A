@@ -22,7 +22,6 @@ namespace spoj
                 {
                     return;
                 }
-
                     if (n2 - n1 == n3 - n2)
                     {
                         Console.WriteLine("AP {0}", n3 + n2 - n1);
