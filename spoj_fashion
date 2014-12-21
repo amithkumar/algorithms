@@ -1,0 +1,48 @@
+/*
+problem coutesy : http://www.spoj.com/problems/FASHION/
+start date : 12/21/2014
+end date : 12/21/2014
+*/
+
+using System;
+using System.Collections.Generic;
+
+namespace spoj
+{
+    internal class Program
+    {
+        private static void Main(string[] args)
+        {
+            int remainingTestCasesCount = int.Parse(Console.ReadLine());
+            while (remainingTestCasesCount != 0)
+            {
+                int N = int.Parse(Console.ReadLine());
+
+                int[] maleHotnesses = ReadHotness(N);
+                int[] femaleHotnesses = ReadHotness(N);
+
+                int coupleHotnessSum = 0;
+                for (int idx = 0; idx < N; idx++)
+                {
+                    coupleHotnessSum += maleHotnesses[idx] * femaleHotnesses[idx];
+                }
+                Console.WriteLine(coupleHotnessSum);
+
+                remainingTestCasesCount--;
+            }
+        }
+
+
+        private static int[] ReadHotness(int N)
+        {
+            int[] hotnesses = new int[N];
+            string[] hotnessConsoleReadings = Console.ReadLine().Split();
+            for (int hIdx = 0; hIdx < hotnessConsoleReadings.Length && hIdx < N; hIdx++)
+            {
+                hotnesses[hIdx] = int.Parse(hotnessConsoleReadings[hIdx]);
+            }
+            Array.Sort(hotnesses);
+            return hotnesses;
+        }
+    }
+}
