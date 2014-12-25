@@ -1,0 +1,39 @@
+/* Problem @ : http://www.spoj.com/problems/LASTDIG/
+Start Date : 12/25/2014 
+End Date : 12/25/2014 
+*/
+ using System;
+ using System.Collections.Generic;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int count = int.Parse(Console.ReadLine());
+        for (int idx = 0; idx < count; idx++)
+        {
+            string[] ip = Console.ReadLine().Split();
+            int a = int.Parse(ip[0]);
+            int b = int.Parse(ip[1]);
+            int res = 1;
+            Dictionary<int, bool> reccur = new Dictionary<int, bool>();
+            List<int> seq = new List<int>();
+            for (int i = 0; i < b; i++)
+            {
+                res *= a;
+                res %= 10;
+                if (reccur.ContainsKey(res))
+                {
+                    break;
+                }
+                else
+                {
+                    reccur[res] = true;
+                    seq.Add(res);
+                }
+            }
+            Console.WriteLine((seq.Count == 0) ? 1:seq[(b-1) % (seq.Count)]);
+        }
+    }
+}
+        
