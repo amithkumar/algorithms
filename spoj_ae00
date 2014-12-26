@@ -1,0 +1,30 @@
+/* 
+Problem : http://www.spoj.com/problems/AE00/
+Start Date : 12/26/2014
+End Date : 12/26/2014
+*/
+
+using System;
+using System.Collections.Generic;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int N = int.Parse(Console.ReadLine());
+        int count = 0;
+        for (int i = 1; i <= N; i++)
+        {
+            int prev = -1;
+            for (int j = 1; j * j <= i; j++)
+            {
+                if (i % j == 0)
+                {
+                    count++;
+                }
+            }
+        }
+        Console.WriteLine(count);
+    }
+}
+        
