@@ -1,0 +1,33 @@
+/* 
+problem : http://community.topcoder.com/stat?c=problem_statement&pm=13597
+start date : 12/27/2014
+end date : 12/28/2014
+*/
+
+using System;
+using System.Collections;
+public class TheKingsArmyDiv2 {
+	public int getNumber(string[] state) {
+        int count = 0;
+		for(int i =0;i<state.Length;i++)
+        {
+            for(int j = 0;j<state[i].Length;j++)
+            {
+                if (state[i][j] == 'H')
+                {
+                    count++;
+
+                    if ((i > 0 && state[i - 1][j] == 'H')
+                        || (i < state.Length - 1 && state[i + 1][j] == 'H')
+                        || (j > 0 && state[i][j - 1] == 'H')
+                        || (j < state[i].Length - 1 && state[i][j + 1] == 'H'))
+                    {
+                        return 0;
+                    }
+                }
+            }
+        }
+        if (count == 0) return 2;
+        return 1;
+	}
+}
