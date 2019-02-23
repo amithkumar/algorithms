@@ -36,7 +36,7 @@ namespace spoj
                     {
                         moves += (nums[i] > avg) ? nums[i] - avg : 0;
                     }
-                    Console.WriteLine(moves);
+                    Console.WriteLine(moves);  
                 }
             } while (true);
         
