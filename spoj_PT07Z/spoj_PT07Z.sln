@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spoj_PT07Z", "spoj_PT07Z\spoj_PT07Z.csproj", "{FC19E1C7-1404-4CA3-B473-FEFCB024A34E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC19E1C7-1404-4CA3-B473-FEFCB024A34E}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{FC19E1C7-1404-4CA3-B473-FEFCB024A34E}.Debug|anycpu.Build.0 = Debug|anycpu
+		{FC19E1C7-1404-4CA3-B473-FEFCB024A34E}.Release|anycpu.ActiveCfg = Release|anycpu
+		{FC19E1C7-1404-4CA3-B473-FEFCB024A34E}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+EndGlobal
